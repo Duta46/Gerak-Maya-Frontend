@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/icon/gm.png" type="image/x-icon" />
+    <title>Gerak Maya | Simulasi Fisika</title>
+
+    <!-- Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Animate Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Hamburger -->
+    <link rel="stylesheet" href="dist/css/hamburgers.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="two/custom.css" />
+
+    <!-- p5.js -->
+</head>
+<body>
+
+    <!-- todo navbar -->
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-box">
+          <div class="logo-container">
+            <img src="assets/icon/gm2.png" alt="Logo" class="logo">
+            <span class="logo-text">GERAK MAYA</span>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#simulasi">Simulasi</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        
+          
+          <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- todo navbar -->
+    
+    <!-- todo header -->
+    <div class="header" id="simulasi">
+      <div class="content">
+        <h1>Hukum Newton</h1>
+        <hr>
+        <div class="row">
+          <div class='two col'><div class='text-center'><img src='assets/img/newton.png' class='responsive expand'></div></div>
+            <div class='ten col'>
+              <p>Dimulai dengan <a href='https://id.wikipedia.org/wiki/Hukum_gerak_Newton'>Hukum Gerak Newton</a>. Hukum Newton secara garis besar mendefinisikan apa itu gaya, dan bagaimana gaya tersebut memengaruhi benda, hukum tersebut menjadi dasar bagi mekanika klasik. <br>
+                <br>Mengutip Hukum Pertamanya: <em>“Sebuah benda yang diam akan tetap diam, kecuali ada gaya luar yang mempengaruhinya. Sebuah benda yang bergerak akan tetap bergerak, dengan kecepatan konstan, dan dalam arah yang sama, kecuali ada gaya luar yang mempengaruhinya”.</em></p>
+            </div>
+        </div>
+        
+      <div class='text'><em>Kecuali ada gaya yang bekerja padanya, suatu benda akan terus melakukan apa yang sedang dilakukan!</em></div>
+      
+        <div class="row">
+          <div class='two col'><div class='text-center'><img src='assets/img/graph.png' class='responsive expand'></div></div>
+            <div class='ten col'>
+              <p>Hukum Newton diterapkan pada benda yang dianggap sebagai partikel, dalam evaluasi pergerakan misalnya, panjang benda tidak dihiraukan, karena objek yang dihitung dapat dianggap kecil, relatif terhadap jarak yang ditempuh. <br>
+                <br>Di sebelah kiri merupakan sebuah partikel. Partikel tersebut akan tetap disana dan tidak bergerak karena tidak ada gaya yang bekerja padanya. Kita dapat mengidentifikasi posisinya (dalam 2D) menggunakan sepasang koordinat yang mencatat perpindahannya dari titik asal yang tetap. Namun bagaimana dengan benda yang bergerak?</p>
+            </div>
+        </div> 
+
+        <p>Dibawah ini adalah simulasi apel jatuh (klik Start untuk menganimasikan).</p>
+
+        <div id="simulasi-container"></div>
+         
+          <meta charset="utf-8" />
+
+        <div id="Simulasi1">
+          <button id="toggleAppleButton" aria-label="START or RESET Sketch" 
+            style="cursor: pointer; border: none; outline: none; padding: 10px 20px; border-radius: 20px; background-color: #ccc; color: black; font-weight: bold;">
+            START
+          </button>
+        </div>
+        <main></main>
+      
+      <div class="text2"> 
+        <p>Gerak apel yang jatuh merupakan contoh dari Gerak Lurus Berubah Beraturan (GLBB). Percepatan konstan yang dialami apel disebabkan oleh gaya gravitasi bumi yang menariknya ke bawah.
+        GLBB adalah gerak lurus suatu benda dengan kecepatan yang berubah secara teratur setiap selang waktu tertentu. Artinya, percepatan benda tersebut konstan. GLBB mempunyai ciri-ciri seperti, lintasan gerak berupa garis lurus, percepatannya konstan (baik nilainya maupun arahnya), kecepatannya berubah secara teratur (bertambah atau berkurang). <br>
+        Percepatan konstan ke bawah yang dialami apel disebabkan oleh gaya gravitasi bumi. Gaya gravitasi ini selalu menarik benda-benda ke arah pusat bumi. Oleh karena itu, selama apel jatuh, ia akan terus mengalami percepatan ke bawah dengan nilai yang sama.</p> 
+        <p>Dibawah ini merupakan contoh benda yang bergerak tanpa adanya gravitasi.</p>
+        
+      
+        <div id="Simulasi2">
+          <button id="toggleBallButton" aria-label="START or RESET Simulation" 
+            style="cursor: pointer; border: none; outline: none; padding: 10px 20px; border-radius: 20px; background-color: #ccc; color: black; font-weight: bold;">
+            START
+          </button>
+        </div>
+        <main></main>
+
+        <p>Tanpa adanya tumbukan, bola akan terus bergerak dengan kecepatan konstan dalam garis lurus. Namun, dalam simulasi di atas, saat bola menabrak dinding, terjadi tumbukan elastis yang mengubah arah kecepatannya meski besar kecepatannya tetap sama dan bola akan terus bergerak tanpa henti.</p>
+      
+        simulasi bola memantul
+        <p>Ketika bola dilepaskan, gravitasi bumi akan menariknya ke bawah, menyebabkan bola mengalami percepatan konstan ke arah pusat bumi. Saat bola mengenai permukaan, terjadi tumbukan yang membuat bola memantul dengan kecepatan lebih rendah dibandingkan saat jatuh. Bola akan memantul beberapa kali, dengan ketinggian pantulan yang semakin berkurang secara bertahap hingga akhirnya berhenti.</p>
+      </div>
+      
+        <h1>Gerak Suatu Benda</h1>
+        <hr>
+        <div class="row">
+          <p>Sebagaimana dijelaskan dalam Hukum II Newton tentang gerak, tiga konsep dasar fisika klasik (posisi, kecepatan, dan percepatan) menjelaskan hubungan antara gaya yang bekerja pada benda dan gerak yang dihasilkannya. Hukum-hukum ini menjadi landasan untuk memahami berbagai fenomena gerak dalam kehidupan sehari-hari.</p>
+            <div class='two col'><div class='text-center'><img src='assets/img/displacement.png' class='responsive expand'></div></div>
+              <div class="ten col">
+                <p>Perpindahan, yang sering dilambangkan dengan x, adalah perubahan posisi suatu objek dalam ruang dan waktu. Secara sederhana, ini merupakan jarak yang ditempuh oleh suatu objek dari titik awal ke titik akhir. <br> 
+                  <br> Divisualisasikan sebagai garis lurus dengan panah di mana panah tersebut menunjukkan arah perpindahan, dan panjang panahnya mewakili besarnya perpindahan. </p>
+              </div>
+
+            <div class='two col'><div class='text-center'><img src='assets/img/velocity.png' class='responsive expand'></div></div>
+              <div class="ten col">
+                <p>Kecepatan adalah laju perubahan posisi terhadap waktu. Ini menunjukkan seberapa cepat suatu objek bergerak.<br> 
+                  <br>Hubungan dengan Perbedaan: Kecepatan adalah turunan pertama dari perbedaan terhadap waktu. Artinya, jika Anda mengetahui bagaimana posisi suatu objek berubah seiring waktu (perbedaan), Anda dapat menghitung kecepatannya dengan mencari gradien (kemiringan) kurva posisi terhadap waktu.</p>
+              </div>
+
+            <div class='two col'><div class='text-center'><img src='assets/img/acceleration.png' class='responsive expand'></div></div>
+              <div class="ten col">
+                <p>Percepatan adalah turunan pertama dari kecepatan terhadap waktu, atau turunan kedua dari perbedaan terhadap waktu. Hukum Newton II dirumuskan sebagai F = ma, di mana F adalah gaya, m adalah massa, dan a adalah percepatan. Ini menunjukkan hubungan langsung antara gaya yang bekerja pada suatu benda dan percepatan yang dihasilkannya.<br> 
+                  <br>Divisualisasikan sebagai garis horizontal pada grafik menunjukkan percepatan konstan.</p>
+              </div>
+
+        <h2><u>Contoh Penerapan</u></h2>
+      <div class="text2">
+        <p>Misalnya, ketika kita melempar bola ke atas, bola akan mengalami perubahan posisi (perbedaan), kecepatannya akan berkurang saat naik dan bertambah saat turun, serta mengalami percepatan akibat gaya gravitasi bumi.</p>
+        <p>Dibawah ini adalah simulasi yang menerapkan bagaimana bola tersebut bergerak.</p>
+        
+        simulasi euler
+        <p>Bola tidak akan bergerak apabila tidak ada gaya yang bekerja padanya. Untuk membuat bola bergerak, kita perlu memperbarui koordinat posisinya dengan menyimpan kecepatan. Pada setiap pembaruan waktu, posisi bola dapat diperbarui berdasarkan kecepatannya, di mana jarak tempuh merupakan hasil kali kecepatan dengan waktu.</p>
+        <p>Namun dengan dalam simulasi ini, bola yang bergerak akan terus memperoleh energi seiring waktu, sehingga gerakannya menjadi semakin tidak stabil.</p>
+        <p>Bagaimana cara membuat simulasi bola memantul terlihat lebih alami? <br>
+          Bagaimana jika kita menggunakan pendekatan berbeda untuk menghitung posisi masa depan bola yang bergerak? Alih-alih menyimpan kecepatan, kita bisa menyimpan posisi bola saat ini, posisi sebelumnya, dan percepatannya.</p>
+          
+          simulasi verlet
+        <p>Dapat dilihat bahwa bola kehilangan energi seiring waktu. Bola memantul dengan lebih stabil, lebih akurat, dan menunjukkan pengurangan energi yang lebih realistis.</p>
+      </div>
+        </div>
+
+        <h1>Simulasi Kain</h1>
+        <hr>
+        <div class="text2">
+          <p>Pernahkah Anda membayangkan bagaimana rasanya bermain-main dengan kain virtual? Sekarang, Anda bisa mewujudkannya! Halaman simulasi kain kami memungkinkan Anda untuk bereksperimen dengan kain secara praktis. 
+            Rasakan sensasi menggeser, merobek, dan melubangi kain virtual yang realistis. Anda bahkan bisa menambahkan atau menghilangkan titik-titik pada jaring kain untuk menciptakan efek yang unik. Ini bukan sekadar simulasi, 
+            ini adalah kanvas digital Anda untuk berkreasi dengan kain. Jangan lewatkan keseruan ini, klik dan coba sekarang!
+          </p>
+          
+          <a href="kain/kain.html"> <button class="animated-button">
+            <span>Mainkan</span>
+            <span></span>
+          </button></a>
+ 
+          
+        </div>
+
+      </div>
+     </div>
+    <!-- todo header -->
+   
+    <!-- JS -->
+     <script src="assets/js/simulasi-1.js"></script>
+     <!-- <script src="assets/js/simulasi-2.js"></script> -->
+    <script src="two/sketch.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

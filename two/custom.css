@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --primary-color: #111111;
+  --primary-color-two: #f3f5f7;
+  --secondary-color: #00ccff;
+  --text-color: #ffffff;
+  --text-color-opacity: #ffffff8a;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.navbar {
+  width: 100%;
+  padding: 25px 0 25px 0;
+  position: fixed;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.navbar.nav-scroll-active {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 30px 0 30px 0;
+}
+
+.navbar.nav-scroll-active .navbar-box .menu li a {
+  color: var(--text-color);
+}
+
+.navbar .navbar-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-box .logo i {
+  color: var(--primary-color-two);
+  font-size: 34px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Menyejajarkan elemen vertikal */
+}
+
+.logo {
+  width: 34px; /* Sesuaikan ukuran logo */
+  margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar .navbar-box .menu {
+  display: flex;
+  column-gap: 40px;
+}
+
+.navbar .navbar-box .menu li {
+  list-style-type: none;
+}
+
+.navbar .navbar-box .menu li a {
+  text-decoration: none;
+  color: var(--text-color-opacity);
+  font-size: 18px;
+}
+
+.navbar .navbar-box .menu li a:hover {
+  color: var(--secondary-color);
+}
+
+.navbar .navbar-box .hamburger {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: none;
+}
+
+.navbar .navbar-box .hamburger .hamburger-box {
+  width: 30px;
+}
+
+.navbar .navbar-box .hamburger .hamburger-box .hamburger-inner,
+.navbar .navbar-box .hamburger .hamburger-box .hamburger-inner::after,
+.navbar .navbar-box .hamburger .hamburger-box .hamburger-inner::before {
+  width: 30px;
+}
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111111;
+  opacity: 1;
+  padding-top: 150px;
+  overflow: hidden;
+  background: #121212; /* Fallback for browsers that don't support gradients */
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+
+  /* Animation */
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+
+
+/* newton */
+.header .container {
+  /* Assuming you want a container element */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.header {
+  width: 100%; /* Stretch to full width of container */
+  padding: 150px;
+}
+
+/* Title Section */
+.content h1 {
+  text-align: left; /* Center title horizontally */
+  margin-bottom: 20px; /* Spacing after title */
+  color: white;
+}
+
+hr {
+  border: 1px solid #ccc; /* Atur ketebalan, warna, dan jenis garis */
+  margin: 20px 0; /* Atur jarak atas dan bawah garis */
+}
+
+/* Image and Text Section */
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap if needed */
+  color: white;
+}
+
+.two.col {
+  width: 20%; /* Define width for two-column layout */
+  padding: 10px; /* Add some padding */
+  text-align: center; /* Center content within column */
+}
+
+.ten.col {
+  width: 80%; /* Define width for ten-column layout */
+  padding: 10px; /* Add some padding */
+  margin-bottom: 30px;
+}
+
+.responsive,
+.expand {
+  /* Assuming these classes are for image responsiveness */
+  max-width: 100%; /* Ensure image scales down */
+  height: auto; /* Maintain aspect ratio */
+}
+
+a {
+  color: var(--secondary-color); /* Adjust link color */
+  text-decoration: underline; /* Underline links */
+}
+
+.header .content p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.header .content .text {
+  font-size: 30px;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.header .content .text2 p {
+  font-size: 16px;
+  text-align: left;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* simulasi 1 */
+
+/* simulasi 1 */
+
+.header .content .tulisan {
+  margin-top: 40px;
+}
+
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffff40;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  scale: 0.95;
+}
+
+.animated-button:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}

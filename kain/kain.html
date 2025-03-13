@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon -->
+    <link rel="icon" href="assets/icon/gm.png" type="image/png"/>
+    <title>Gerak Maya | Simulasi Fisika</title>
+
+</head>
+<body>
+    <div id="options">
+        <div>
+            <label for="spacing">Jarak</label>
+            <input type="range" id="spacing" min="1" max="12" step="1" value="7" oninput="resetSpacing(this,this.value)">
+        </div>
+        <div>
+            <label for="cols">Jumlah Kolom</label>
+            <input type="range" id="cols" min="20" max="76" step="1" value="65" oninput="resetCols(this,this.value)">
+        </div>
+        <div>
+            <label for="rows">Jumlah Baris</label>
+            <input type="range" id="rows" min="20" max="60" step="1" value="40" oninput="resetRows(this,this.value)">
+        </div>
+        <div>
+            <button id="changeCloth">Ganti</button>
+        </div>
+    </div>
+
+    <div id="actions">
+        <div>
+            <input type="radio", name="Action", id="tear", checked>
+            <label for="tear">Merobek</label>
+        </div>
+        <div>
+            <input type="radio", name="Action", id="drag">
+            <label for="drag">Menyeret</label>
+        </div>
+        <div>
+            <input type="radio", name="Action", id="move">
+            <label for="move">Memindahkan Pin🔴</label>
+        </div>
+        <div>   
+            <input type="radio", name="Action", id="add">
+            <label for="add">Tambahkan Pin</label>
+        </div>
+        <div>   
+            <input type="radio", name="Action", id="remove">
+            <label for="remove">Hapus Pin</label>
+        </div>
+
+    </div>
+    <div id="canvas_container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="cloth2.js"></script> 
+    <script src="events.js"></script> 
+
+</body>
+</html>
